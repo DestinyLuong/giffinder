@@ -11,7 +11,7 @@
   function appendImageToGallery(srcURL) {
       // write a function that will append an <img> to the div with class="gallery"
       // using the URL provided in the parameters
-      for(var i = 0; i > 10; i ++){
+      for(var i = 0; i < 10; i ++){
        $(".gallery").append("<img src=" + srcURL + ">");
       }
   }
