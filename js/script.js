@@ -43,8 +43,16 @@ $(document).ready(function(){
     2. get the typed input from the search input box
     3. call the functions below!
   */
-  $("#btn").click(function(){
-   var type = $("#srch-term").val();
-   callGiphyAPIWithSearchTerm(type);
-  });
+    $("#btn").click(function(){
+       var type = $("#srch-term").val();
+       callGiphyAPIWithSearchTerm(type);
+       $(".text-center").hide();
+    });
+  
+    $("#srch-term").keyup(function(event) {
+        if (event.keyCode === 13) {
+            $("#btn").click();
+        }
+    });
+
 });
